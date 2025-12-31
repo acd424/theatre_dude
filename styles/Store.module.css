@@ -91,31 +91,35 @@
 .productImage {
   position: relative;
   width: 100%;
-  height: 300px;
-  background: linear-gradient(135deg, rgba(139, 0, 0, 0.15) 0%, rgba(218, 165, 32, 0.15) 100%);
+  height: 400px;
+  background: #1a1a1a;
   overflow: hidden;
 }
 
-.imagePlaceholder {
+.productImg {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: all 0.4s ease;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
 }
 
-.productCard:hover .imagePlaceholder {
-  transform: scale(1.1);
+.productImgHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.placeholderText {
-  font-family: var(--font-display);
-  font-size: 4rem;
-  color: var(--color-accent);
-  opacity: 0.3;
-  letter-spacing: 3px;
+.productCard:hover .productImgHover {
+  opacity: 1;
+}
+
+.productCard:hover .productImg {
+  opacity: 0;
 }
 
 .productInfo {
@@ -157,7 +161,7 @@
 }
 
 .ctaContent {
-  background: linear-gradient(135deg, rgba(139, 0, 0, 0.2) 0%, rgba(218, 165, 32, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.2) 0%, rgba(180, 0, 0, 0.2) 100%);
   border: 3px solid var(--color-accent);
   padding: 5rem 3rem;
   text-align: center;
@@ -223,6 +227,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .vintedButton::before {
@@ -248,7 +253,7 @@
 
 .vintedButton:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(139, 0, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(139, 0, 0, 0.4);
 }
 
 .buttonIcon {
@@ -271,6 +276,10 @@
 
   .productGrid {
     grid-template-columns: 1fr;
+  }
+
+  .productImage {
+    height: 300px;
   }
 
   .ctaContent {

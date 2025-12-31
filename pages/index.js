@@ -24,6 +24,15 @@ export default function Home() {
                 className={styles.mainLogo}
               />
             </div>
+            
+            <div className={styles.heroVisual}>
+              <div className={styles.visualCircle}></div>
+              <div className={styles.visualTextContainer}>
+                <span className={styles.visualTextWhite}>THEATRE</span>
+                <span className={styles.visualTextRed}>DUDE</span>
+              </div>
+            </div>
+            
             <p className={styles.heroSubtitle}>
               Experience incredible improv performances, theatre productions, and exclusive autographed merchandise from your favorite shows.
             </p>
@@ -35,11 +44,6 @@ export default function Home() {
                 Browse Store
               </Link>
             </div>
-          </div>
-          
-          <div className={styles.heroVisual}>
-            <div className={styles.visualCircle}></div>
-            <div className={styles.visualText}>THEATRE</div>
           </div>
         </section>
 

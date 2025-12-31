@@ -104,7 +104,6 @@
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
-  cursor: pointer;
 }
 
 .podcastCard::before {
@@ -166,17 +165,20 @@
   padding: 0.8rem 2rem;
   font-size: 1.2rem;
   letter-spacing: 2px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .playBtn:hover {
   background: var(--color-accent-2);
   transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
 }
 
 .playIcon {
